@@ -1,5 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Q15cif73)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24194419&assignment_repo_type=AssignmentRepo)
+[![Open in Visual Studio Code](https://classroom.github.com/assets/dopen-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24194419&assignment_repo_type=AssignmentRepo)
 # Day 2 Assignment — Django Apps & URL Routing
 
 ## What You're Building
@@ -31,7 +31,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
+   path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
 ]
@@ -82,3 +82,17 @@ This repo includes automated checks (`.github/workflows/classroom.yml`) that ver
 - no virtual environment was committed
 
 These checks cover the mechanical parts of the assignment. Your README explanations and homework answers are graded separately by your instructor.
+
+
+## Homework Questions (answers)
+
+1. In your own words, explain the difference between a project and an app.?
+A project is a temporary, organized endeavor with a specific beginning and end. It is a management concept used to create a unique product, service, or result while An app is a software program designed to perform specific tasks for an end-user. It is a tangible, functional digital product.
+2. What command creates a new Django app?
+The command to create a new Django app is startapp.
+You typically run this command from your terminal, using your project's manage.py file.
+3. Why do we register an app inside `INSTALLED_APPS`?
+Registering an app inside INSTALLED_APPS is essentially introducing the app to Django’s central registry.
+When you run startapp, you are just creating a folder with Python files. Django doesn't automatically scan your entire hard drive looking for new folders. By adding the app's name to INSTALLED_APPS, you are explicitly telling the Django framework: "Hey, this app is part of this project. Please load it and include it in your processes."
+4. What does giving a URL a `name=` actually let you do later?
+Giving a URL a name= parameter in Django is all about decoupling. It allows you to refer to a URL by a logical, human-readable label rather than hardcoding the actual URL path (like /about/ or /blog/post/1/) throughout your code.
